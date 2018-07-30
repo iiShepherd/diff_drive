@@ -151,3 +151,5 @@ include_directories(
 add_executable(Joymotion_node src/joystick.cpp)
 FIND_LIBRARY(EXT_LIBRARY extName library_full_path)
 target_link_libraries(Joymotion_node ${catkin_LIBRARIES} SDL2)
+set(CMAKE_CXX_FLAGS "-std=c++0x ${CMAKE_CXX_FLAGS}")
+
