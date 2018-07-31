@@ -17,10 +17,6 @@ Uint32 timeStepMs = 1000.f / 120;
 struct var
 {
 
-	//Joystick values
-	Sint16 jaxis_button_1;
-	Uint8 jbutton_button_0 ;
-
 	//ROS
 	ros::Publisher joy_pub;
 
@@ -38,7 +34,7 @@ void cmd_foward(SDL_Joystick* joystick)
 
 	param.joystick_cmd.jaxis_1 = SDL_JoystickGetAxis(joystick, 1);
 	param.joystick_cmd.jbutton_0 = SDL_JoystickGetButton(joystick, 0);
-	std::this_thread::sleep_for( std::chrono::milliseconds(1) );
+	std::this_thread::sleep_for( std::chrono::milliseconds(100) );
 	
 }
 
